@@ -1,0 +1,171 @@
+/* ============================================================ default ============================================================*/
+:root{
+    font-family: 'Segoe UI';
+    font-family: 20px;
+    --azul-escuro: rgb(0, 29, 75);
+    --branco-padrao: white;
+    --preto-padrao: black;
+    --cinza-account: lightgray;
+    --back-button: rgb(11, 136, 219);
+
+    --padding-left-right-mainslide: 5%;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F7FA;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/*removing underline in links*/
+a{
+    text-decoration: none;
+}
+
+/*============================================================ head ============================================================*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    gap: 75vw;
+    background-color: var(--azul-escuro);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header img{
+    min-width: 10vw;
+    width: 200px;
+    height: auto;
+}
+
+.account{
+    background-color: var(--cinza-account);
+    height: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px;
+    padding-top: 1px;
+}
+
+.account a{
+    padding: 5px;
+    color: var(--preto-padrao);
+}
+
+/*============================================================ main ============================================================*/
+main{
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+/*main slide*/
+.slidecontainer{
+    width: auto;
+    height: auto;
+    padding-left: var(--padding-left-right-mainslide);
+    padding-right: var(--padding-left-right-mainslide);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1mm;
+}
+
+.slide img{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/*packs and invite*/
+
+.invitepack{
+    text-align: center;
+    
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    gap: 7px;
+    margin: 10px 0px;
+}
+
+.invitepack h3{
+    margin: 0px;
+    font-size: 35px;
+    color: var(--azul-escuro);
+}
+
+.invitepack p{
+    max-width: 40%;
+    margin: 0px;
+    font-size: 25px;
+}
+
+.packs{
+    padding: 8px 12px;
+    min-width: fit-content;
+
+    font-size: 25px;
+    border-radius: 5px;
+    border-style: none;
+    
+    background-color: var(--back-button);
+    box-shadow: 0 0 0 1 rgb(black);
+    cursor: pointer;
+}
+
+.packs:hover{
+    color: var(--azul-escuro);
+}
+
+/*cards EUA|MEX*/
+.estadios{
+    font-size: 25px;
+    max-width: fit-content;
+    position: relative;
+}
+
+.estadios::after{
+    content: '';
+    position: absolute;
+    
+    bottom: -1.5px;
+    left: 0;
+
+    width: 80%;
+    height: 3px;
+    background-color: var(--azul-escuro);
+    border-radius: 5px;
+}
+
+
+.cardsslide{
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+
+    padding-top: 10px;
+}
+
+.euaslidecontainer, .mexslidecontainer{
+    width: 500px;
+    height: auto;
+    
+    text-align: center;
+}
+
+/*============================================================ footer ============================================================*/
