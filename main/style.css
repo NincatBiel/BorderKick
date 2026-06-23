@@ -30,6 +30,7 @@ body{
     min-width: 10vw;
     width: 200px;
     height: auto;
+    flex-shrink: 0;
 }
 
 /*removing underline in links*/
