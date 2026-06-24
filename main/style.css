@@ -7,6 +7,7 @@
     --preto-padrao: black;
     --cinza-account: lightgray;
     --back-button: rgb(11, 136, 219);
+    --backcardslide: rgb(212, 212, 212);
 
     --padding-left-right-mainslide: 15%;
 }
@@ -26,21 +27,19 @@ body{
     box-sizing: border-box;
 }
 
+/*headerfooterlogo class was here*/
 .headerfooterlogo{
-    min-width: 10vw;
     width: 200px;
-    height: auto;
-    flex-shrink: 0;
+    height: 76.19px;
 }
 
 /*removing underline in links*/
-a{
-    text-decoration: none;
-}
+a{text-decoration: none;}
 
 /*============================================================ head ============================================================*/
 
 header{
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content:flex-start;
@@ -50,6 +49,7 @@ header{
     background-position: center;
     width: 100%;
     box-sizing: border-box;
+    z-index: 2;
 }
 
 .account{
@@ -131,6 +131,8 @@ main{
 
 .packs:hover{
     color: var(--azul-escuro);
+    transform: scale(1.1);
+    font-size: 25px;
 }
 
 /*cards EUA|MEX*/
@@ -160,26 +162,45 @@ main{
     gap: 20%;
 
     padding-top: 10px;
+
 }
 
 .euaslidecontainer, .mexslidecontainer{
     width: 500px;
-    height: auto;
+    height: 500px;
+    overflow: hidden;
     
     text-align: center;
+
+    border-radius: 2px;
 }
+
+.euaslide, .mexslide{
+    height: 100%;
+    background-color: var(--backcardslide);
+    text-align: left;
+}
+
+/*Benjamim, vê isso aqui pls*/
+.cardtext{
+    padding-left: 5px;
+
+}
+
 
 /*============================================================ footer ============================================================*/
 footer{
     display: flex;
     flex-direction: row;
-    justify-content:flex-start;
+    align-items: center;
+    justify-content:space-between;
     background-color: var(--azul-escuro);
     background-size: cover;
     background-position: center;
     width: 100%;
     box-sizing: border-box;
-    gap: 60%;
+    
+    transform: translateY(40%);
 }
 
 footer p{
@@ -190,6 +211,7 @@ footer p{
 .info{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 5px;
 }
 
@@ -197,3 +219,4 @@ footer p{
     width: 30px;
     height: auto;
 }
+
