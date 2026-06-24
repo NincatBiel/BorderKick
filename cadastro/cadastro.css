@@ -2,11 +2,18 @@
 :root{
     font-family:'Outfit';
     font-size: 20px;
+    color: var(--azul-escuro);
     --azul-escuro: rgb(0, 29, 75);
     --branco-padrao: rgb(247, 244, 244);
     --preto-padrao: black;
     --button-text: white;
     --back-button-opposite: rgb(63, 122, 216);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -29,7 +36,15 @@ h1{
 
 .login{
     font-size: 15px;
+    color: var(--azul-escuro);
+    text-decoration: underline;
+    transition: color 0.2s ease;
 }
+
+.login:hover {
+    color: var(--back-button-opposite);
+}
+
 
 
 /* ============================================================ form ============================================================*/
@@ -50,11 +65,13 @@ label{
     font-weight: bold;
 }
 
+/* =========== Inputs ==================*/
 input{
     border-radius: 5px;
     border-style: solid;
     border-width: 1.5px;
     border-color: var(--preto-padrao);
+    padding: 8px 12px;
 
     font-family: 'Outifit', sans-serif;
 }
@@ -71,6 +88,7 @@ select{
     border-color: var(--preto-padrao);
 }
 
+/*====================== Buttons =================================*/
 button{
     border-radius: 5px;
     border-style: none;
@@ -80,6 +98,7 @@ button{
     color: var(--button-text);
     cursor: pointer;
     font-size: 20px;
+    transition: all 0.25s ease;
 }
 
 #back-button{
@@ -93,3 +112,123 @@ button:hover{
     background-color: var(--back-button-opposite);
 }
 
+/*Responsividade - gerado pelo DeepSeek*/
+/* ============================================================ responsividade - celulares ============================================================*/
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        padding: 18px 15px;
+        gap: 12px;
+        border-radius: 5px;
+        max-width: 100%;
+    }
+
+    header img {
+        width: 150px;
+    }
+
+    .welcome {
+        gap: 3px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .login {
+        font-size: 0.75rem;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    input,
+    select {
+        padding: 7px 8px;
+        font-size: 0.8rem;
+        border-width: 1px;
+    }
+
+    input[type="file"] {
+        padding: 5px 0;
+        font-size: 0.75rem;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+        margin: 5px 0 3px 0;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+        width: 100%;
+        align-self: center;
+    }
+
+    #back-button {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+        width: 100%;
+    }
+
+    form {
+        gap: 5px;
+    }
+
+    form > div {
+        gap: 0px;
+    }
+
+    br {
+        display: none;
+    }
+}
+
+/* ============================================================ responsividade - celulares muito pequenos ============================================================*/
+@media (max-width: 360px) {
+    main {
+        padding: 12px 10px;
+        gap: 10px;
+    }
+
+    header img {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 1.1rem;
+    }
+
+    input,
+    select {
+        padding: 5px 6px;
+        font-size: 0.75rem;
+    }
+
+    button[type="submit"],
+    #back-button {
+        font-size: 0.8rem;
+        padding: 6px 15px;
+    }
+}
+
+/* ============================================================ responsividade - telas médias ============================================================*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        max-width: 600px;
+        padding: 30px 25px;
+    }
+
+    header img {
+        width: 220px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+}

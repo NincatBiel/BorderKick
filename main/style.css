@@ -1,6 +1,6 @@
 /* ============================================================ default ============================================================*/
 :root{
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Segoe UI';
     font-size: 20px;
     --azul-escuro: rgb(0, 29, 75);
     --branco-padrao: white;
@@ -42,8 +42,7 @@ header{
     position: fixed;
     display: flex;
     flex-direction: row;
-    justify-content:flex-start;
-    gap: 75vw;
+    justify-content:space-between;
     background-color: var(--azul-escuro);
     background-size: cover;
     background-position: center;
@@ -59,6 +58,7 @@ header{
     border-bottom-right-radius: 5px;
     padding: 5px;
     padding-top: 1px;
+    box-shadow: 1px 1px 1px 1px black;
 }
 
 .account a{
@@ -220,3 +220,342 @@ footer p{
     height: auto;
 }
 
+/* ============================================================ responsividade - telas médias (tablets) ============================================================*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        gap: 50vw;
+        padding: 5px 15px;
+    }
+
+    .headerfooterlogo {
+        width: 150px;
+        height: auto;
+    }
+
+    main {
+        max-width: 90vw;
+        margin-top: 80px;
+    }
+
+    .slidecontainer {
+        width: 85%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .invitepack h3 {
+        font-size: 28px;
+    }
+
+    .invitepack p {
+        max-width: 60%;
+        font-size: 20px;
+    }
+
+    .packs {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+
+    .packs:hover {
+        font-size: 20px;
+    }
+
+    .estadios {
+        font-size: 22px;
+    }
+
+    .estadios::after {
+        width: 70%;
+        height: 2px;
+    }
+
+    .cardsslide {
+        gap: 15%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .euaslidecontainer,
+    .mexslidecontainer {
+        width: 350px;
+        height: 380px;
+    }
+
+    .euaslide img,
+    .mexslide img {
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .cardtext h3 {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .cardtext h4 {
+        font-size: 14px;
+        margin: 3px 0;
+    }
+
+    .cardtext p {
+        font-size: 13px;
+        margin: 5px 0;
+        padding-right: 5px;
+    }
+
+    footer {
+        transform: translateY(20%);
+        padding: 15px 25px;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    footer p {
+        font-size: 16px;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .info img {
+        width: 25px;
+    }
+}
+
+/* ============================================================ responsividade - celulares ============================================================*/
+@media (max-width: 768px) {
+    header {
+        gap: 20vw;
+        padding: 5px 8px;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+    }
+
+    .headerfooterlogo {
+        width: 100px;
+        height: auto;
+    }
+
+    .account {
+        padding: 3px 6px;
+        font-size: 12px;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .account a {
+        padding: 3px;
+        font-size: 12px;
+    }
+
+    main {
+        max-width: 98vw;
+        margin-top: 0px;
+        padding-top: 10px;
+    }
+
+    .slidecontainer {
+        width: 98%;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .slide img {
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .invitepack {
+        gap: 5px;
+        margin: 8px 0px;
+    }
+
+    .invitepack h3 {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    .invitepack p {
+        max-width: 95%;
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    .packs {
+        font-size: 14px;
+        padding: 6px 12px;
+        border-radius: 3px;
+    }
+
+    .packs:hover {
+        font-size: 14px;
+        transform: scale(1.05);
+    }
+
+    .estadios {
+        font-size: 16px;
+        margin: 8px 0;
+        max-width: 100%;
+    }
+
+    .estadios::after {
+        width: 50%;
+        height: 2px;
+        bottom: -2px;
+    }
+
+    .cardsslide {
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5px;
+    }
+
+    .euaslidecontainer,
+    .mexslidecontainer {
+        width: 280px;
+        height: 320px;
+        border-radius: 3px;
+    }
+
+    .euaslide,
+    .mexslide {
+        border-radius: 3px;
+    }
+
+    .euaslide img,
+    .mexslide img {
+        height: 150px;
+        object-fit: cover;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+
+    .cardtext {
+        padding-left: 8px;
+        padding-right: 5px;
+    }
+
+    .cardtext h3 {
+        font-size: 14px;
+        margin: 4px 0;
+    }
+
+    .cardtext h4 {
+        font-size: 12px;
+        margin: 2px 0;
+        color: #555;
+    }
+
+    .cardtext p {
+        font-size: 11px;
+        margin: 4px 0;
+        padding-right: 5px;
+        line-height: 1.4;
+    }
+
+    footer {
+        transform: translateY(0);
+        padding: 12px 15px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    footer .headerfooterlogo {
+        width: 100px;
+    }
+
+    footer p {
+        font-size: 13px;
+        text-align: center;
+        margin: 5px 0;
+    }
+
+    .info {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .info img {
+        width: 22px;
+        height: auto;
+    }
+}
+
+/* ============================================================ responsividade - celulares muito pequenos ============================================================*/
+@media (max-width: 380px) {
+    header {
+        gap: 10vw;
+        padding: 3px 5px;
+    }
+
+    .headerfooterlogo {
+        width: 80px;
+    }
+
+    .account {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+
+    .account a {
+        font-size: 10px;
+        padding: 2px;
+    }
+
+    .invitepack h3 {
+        font-size: 15px;
+    }
+
+    .invitepack p {
+        font-size: 12px;
+    }
+
+    .packs {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+
+    .packs:hover {
+        font-size: 12px;
+    }
+
+    .estadios {
+        font-size: 14px;
+    }
+
+    .euaslidecontainer,
+    .mexslidecontainer {
+        width: 240px;
+        height: 280px;
+    }
+
+    .euaslide img,
+    .mexslide img {
+        height: 120px;
+    }
+
+    .cardtext h3 {
+        font-size: 12px;
+    }
+
+    .cardtext h4 {
+        font-size: 11px;
+    }
+
+    .cardtext p {
+        font-size: 10px;
+    }
+
+    footer p {
+        font-size: 11px;
+    }
+
+    .info img {
+        width: 18px;
+    }
+}

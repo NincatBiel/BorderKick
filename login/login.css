@@ -1,10 +1,210 @@
+/*Gerado pelo Deepseek e mexido por Ramos*/
+
 /* ============================================================ default ============================================================*/
-:root{
+:root {
     font-family: 'Outfit', sans-serif;
     font-size: 20px;
     --azul-escuro: rgb(0, 29, 75);
-    --branco-padrao: white;
+    --branco-padrao: rgb(247, 244, 244);
     --preto-padrao: black;
+    --button-text: white;
+    --back-button-opposite: rgb(63, 122, 216);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--azul-escuro);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+header img{
+    width: 300px;
+    height: auto;
+}
+
+/* ============================================================ main container ============================================================*/
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco-padrao);
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 35px;
+    border-radius: 8px;
+    margin: 0 auto;
+    gap: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================ welcome ============================================================*/
+main > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--azul-escuro);
+}
+
+main > div a {
+    font-size: 0.85rem;
+    color: var(--azul-escuro);
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+main > div a:hover {
+    color: var(--back-button-opposite);
 }
 
 /* ============================================================ form ============================================================*/
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label {
+    font-weight: 600;
+    color: var(--azul-escuro);
+    font-size: 0.9rem;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: var(--preto-padrao);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.2s ease;
+    background-color: white;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--back-button-opposite);
+    box-shadow: 0 0 0 3px rgba(63, 122, 216, 0.2);
+}
+
+input::placeholder {
+    color: #999;
+    font-weight: 300;
+}
+
+/* ============================================================ buttons ============================================================*/
+button[type="submit"] {
+    border-radius: 5px;
+    border-style: none;
+    background-color: var(--azul-escuro);
+    width: fit-content;
+    padding: 10px 30px;
+    color: var(--button-text);
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.05);
+    background-color: var(--back-button-opposite);
+    box-shadow: 0 4px 12px rgba(63, 122, 216, 0.3);
+}
+
+main > button:last-of-type {
+    align-self: center;
+    border-radius: 5px;
+    border-style: none;
+    background-color: var(--azul-escuro);
+    padding: 10px 25px;
+    color: var(--button-text);
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    margin-top: 5px;
+}
+
+main > button:last-of-type:hover {
+    transform: scale(1.05);
+    background-color: var(--back-button-opposite);
+    box-shadow: 0 4px 12px rgba(63, 122, 216, 0.3);
+}
+
+/* ============================================================ responsiveness ============================================================*/
+@media (max-width: 768px) {
+    main {
+        padding: 30px 20px;
+        max-width: 100%;
+        border-radius: 5px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    button[type="submit"] {
+        font-size: 1rem;
+        padding: 8px 25px;
+        width: 100%;
+        align-self: center;
+    }
+
+    main > button:last-of-type {
+        font-size: 0.85rem;
+        padding: 8px 20px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 20px 15px;
+        gap: 18px;
+    }
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    main > div a {
+        font-size: 0.75rem;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    input {
+        padding: 7px 8px;
+        font-size: 0.8rem;
+    }
+
+    button[type="submit"] {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+}

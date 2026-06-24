@@ -11,24 +11,33 @@
     <title>BorderKick - Login</title>
 </head>
 <body>
-    <h1>Login BorderKick</h1>
+    
+    <header>
+        <img src="../assets/logo.png" alt="BorderKick Logo">
+    </header>
 
-    <form>
+    <main>
 
-        <label for="Email">E-mail:</label><br>
-        <input required type="email" id="Email" name="Email" placeholder="name@example.com"><br><br>
+        <div class="welcome">
+            <h1>Entrar na conta</h1>
+            <a href="../cadastro/cadastro.html" class="register">Não possui login? Cadastre-se aqui</a>
+        </div>
 
-        <label for="Senha">Senha:</label><br>
-        <input required type="password" id="Senha" name="Senha" placeholder="Insira sua senha" minlength="8"><br><br>
+        <form>
+            <div>
+                <label for="Email">E-mail:</label><br>
+                <input required type="email" name="Email" id="Email" placeholder="name@example.com">
+            </div>
 
-        <button type="submit">Entrar</button>
+            <div>
+                <label for="Senha">Senha:</label><br>
+                <input required type="password" name="Senha" id="Senha" placeholder="Insira sua senha" minlength="8">
+            </div>
 
-    </form>
+            <button type="submit">Entrar</button>
+        </form>
 
-    <br>
-
-    <button onclick="window.location.href='../index.html'">Voltar</button>
-    <a href="../cadastro/cadastro.html">Não possui login? Cadastre-se aqui</a>
-
+        <button onclick="window.location.href='../index.html'" id="back-button">Voltar para o início</button>
+    </main>
 </body>
 </html>
