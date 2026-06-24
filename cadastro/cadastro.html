@@ -1,62 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="icon" href="../assets/icon.png">
-    <link rel="stylesheet" href="cadastro.css">
-    <script src="cadastro.js" defer></script>
-    <title>BorderKick - Cadastro</title>
-</head>
-<body>
-    <main>
-        <h1>Cadastro de Torcedor</h1>
-        
-        <form>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="icon" href="../assets/icon.png">
+        <link rel="stylesheet" href="cadastro.css">
+        <script src="cadastro.js" defer></script>
+        <title>BorderKick - Cadastro</title>
+    </head>
+    <body>
+        <header><img src="../assets/logo.png"></header>
+        <main>
+            <div class="welcome"> <!--classe para separar o título do formulário-->
+                <h1>Cadastro de conta</h1>
+                <a href="../cadastro/cadastro.html" class="login">Já possui um login? Entre aqui</a>
+            </div>
             
-            <label for="Nome">Nome Completo:</label><br>
-            <input required type="text" name="Nome" id="Nome" placeholder="Insira seu nome completo"><br><br>
+            <form>
+                
+                <div>
+                    <label for="Email">E-mail:</label><br>
+                    <input required type="email" name="Email" id="Email" placeholder="name@example.com"><br><br>
+                    
+                    <label for="Password">Senha:</label><br>
+                    <input required type="text" name="Senha" id="Senha" placeholder="Crie uma senha"><br><br>
+                    
+                    <label for="Nome">Nome Completo:</label><br>
+                    <input required type="text" name="Nome" id="Nome" placeholder="Insira seu nome completo"><br><br>
+                    
+                    <!--js is required here--> <!--is it really necessary to be a requirement?-->
+                    <label for="CPF">CPF:</label><br>
+                    <input required type="text" name="CPF" id="CPF" placeholder="000.000.000-00"><br><br> 
+                    
+                    <label for="Birthdate">Data de Nascimento:</label><br>
+                    <input required type="date" name="Birthdate" id="Birthdate"><br><br>
+                    
+                    <label for="Nacionaldade">Nacionalidade:</label><br>
+                    <input required type="text" name="Nacionalidade" id="Nacionalidade" placeholder="Insira sua nacionaldade"><br><br> <!--is it really necessary?-->
+                    
+                    
+                    <label for="Phone">Telefone:</label><br>
+                    <input required type="tel" name="Phone" id="Phone" placeholder="+55 (00) 90000-0000"><br> <!--js is required here-->
+                    
+                    <h3>Documentos</h3>
+                    
+                    <label for="Passaporte">Passaporte:</label><br>
+                    <input required type="file" name="Passaporte" id="Passaporte"><br><br>
+                    
+            <label for="VistoAmericano">Comprovante de Visto Americano:</label><br>
+            <input required type="file" name="VistoAmericano" id="VistoAmericano"><br><br>
             
-            <!--js is required here--> <!--is it really necessary to be a requirement?-->
-            <label for="CPF">CPF:</label><br>
-            <input required type="text" name="CPF" id="CPF" placeholder="000.000.000-00"><br><br> 
-            
-            <label for="Birthdate">Data de Nascimento:</label><br>
-            <input required type="date" name="Birthdate" id="Birthdate"><br><br>
-            
-            <label for="Nacionaldade">Nacionalidade:</label><br>
-            <input required type="text" name="Nacionalidade" id="Nacionalidade"><br><br> <!--is it really necessary?-->
-            
-            <label for="Email">E-mail:</label><br>
-            <input required type="email" name="Email" id="Email" placeholder="name@example.com"><br><br>
-            
-            <label for="Phone">Telefone:</label><br>
-            <input required type="tel" name="Phone" id="Phone" placeholder="+55 (00) 90000-0000"><br><br> <!--js is required here-->
-            
-            <h3>Documentos</h3>
-            
-            <label for="Passaporte">Passaporte:</label><br>
-            <input required type="file" name="Passaporte" id="Passaporte"><br><br>
-            
-        <label for="VistoAmericano">Comprovante de Visto Americano:</label><br>
-        <input required type="file" name="VistoAmericano" id="VistoAmericano"><br><br>
-        
-        <label for="VistoStatus">Status do Visto Americano:</label><br>
-        <select required id="VistoStatus" name="VistoStatus">
-            <option value="Reprovado">Reprovado</option>
-            <option value="Pendente">Pendente</option>
-            <option value="Aprovado">Aprovado e Validado</option>
-        </select><br><br>
+            <label for="VistoStatus">Status do Visto Americano:</label><br>
+            <select required id="VistoStatus" name="VistoStatus">
+                <option value="Reprovado">Reprovado</option>
+                <option value="Pendente">Pendente</option>
+                <option value="Aprovado">Aprovado e Validado</option>
+            </select><br><br>
+        </div>
         
         <button type="submit">Cadastrar-se</button>
         
     </form>
     
-    <a href="../cadastro/cadastro.html">Já possui um login? Entre aqui</a>
-    <button onclick="window.location.href='../index.html'">Voltar</button>
+    <button onclick="window.location.href='../index.html'" id="back-button">Voltar para o início</button>
     
 </main>
 </body>

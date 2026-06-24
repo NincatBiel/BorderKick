@@ -1,21 +1,95 @@
 /* ============================================================ default ============================================================*/
 :root{
-    font-family: 'Outfit', sans-serif;
-    font-family: 20px;
+    font-family:'Outfit';
+    font-size: 20px;
     --azul-escuro: rgb(0, 29, 75);
     --branco-padrao: rgb(247, 244, 244);
     --preto-padrao: black;
+    --button-text: white;
+    --back-button-opposite: rgb(63, 122, 216);
 }
 
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--branco-padrao);
+    background-color: var(--azul-escuro);
 }
+
+/* ============================================================ header ============================================================*/
+header img{
+    width: 300px;
+    height: auto;
+}
+
+/* ============================================================ welcome ============================================================*/
+h1{
+    margin: 0;
+}
+.welcome{
+    gap: 2px;
+}
+
+.login{
+    font-size: 15px;
+}
+
 
 /* ============================================================ form ============================================================*/
 main{
-    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--branco-padrao);
     background-size: cover;
+    width: 50%;
+    padding: 15px;
+    padding-top: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    gap: 20px;
 }
+
+label{
+    font-weight: bold;
+}
+
+input{
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: var(--preto-padrao);
+
+    font-family: 'Outifit', sans-serif;
+}
+
+input[type="file"]{
+    border-style: none;
+    border-radius: 0;
+}
+
+select{
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--preto-padrao);
+}
+
+button{
+    border-radius: 5px;
+    border-style: none;
+    background-color: var(--azul-escuro);
+    width: fit-content;
+    padding: 3px 5px;
+    color: var(--button-text);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#back-button{
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+button:hover{
+    transform: scale(1.1);
+    background-color: var(--back-button-opposite);
+}
+
