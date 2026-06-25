@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pacotes.css">
+    <script src="pacotes.js" defer></script>
+    <link rel="icon" href="../assets/icon.png">
+    <title>BorderKick - Pacotes</title>
+</head>
+<body>
+    <header>
+        <img src="../assets/logo.png" class="headerfooterlogo">
+        <nav>
+            <a href="../index.html">Início</a>
+            <p>|</p>
+            <a href="pacotes.html">Pacotes</a>
+            <p>|</p>
+            <a href="../login/login.html">Acesse sua conta</a> <!--Login-->
+        </nav>
+    </header>
+
+    <main>
+        <h1>Pacotes Disponíveis</h1>
+        <h2>Escolha o pacote ideal e viva a melhor experiência da sua vida</h2>
+
+        <div class="packs">
+            <div class="packcard">
+                <img src="../assets/pacotes/1.png" alt="">
+                <div class="packtext">
+                    <h3>Classic</h3>
+                    <ul>
+                    <li>Um jogo à sua escolha</li>
+                    <li>Estadia de 2 dias</li>
+                    </ul>
+                    <p>R$ 5.000</p>
+                    <button onclick="naodaagr()">Selecionar este pacote</button>
+               </div>
+            </div>
+            <div class="packcard">
+                <img src="../assets/pacotes/2.png" alt="">
+                <div class="packtext">
+                    <h3>Premium</h3>
+                    <ul>
+                    <li>Dois jogos à sua escolha</li>
+                    <li>Estadia de 6 dias</li>
+                    </ul>
+                    <p>R$ 10.000</p>
+                    <button onclick="naodaagr()">Selecionar este pacote</button>
+                </div>
+            </div>
+            <div class="packcard">
+                <img src="../assets/pacotes/3.png" alt="">
+                <div class="packtext">
+                    <h3>Master</h3>
+                    <ul>
+                    <li>Dois jogos à sua escolha</li>
+                    <li>Final da copa</li>
+                    <li>Estadia de 10 dias</li>
+                    </ul>
+                    <p>R$ 15.000</p>
+                    <button onclick="naodaagr()">Selecionar este pacote</button>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    
+    <footer>
+        <img src="../assets/logo.png" class="headerfooterlogo">
+        <!--contatos-->
+        <div>
+            <p>Entre em contato conosco através das redes abaixo:</p>
+            <div class="info">
+                <a href="https://instagram.com"><img src="../assets/instagram.png"></a>
+                <a href="https://youtube.com"><img src="../assets/youtube.png"></a>
+                <a href="https://x.com"><img src="../assets/x.png"></a>
+            </div>
+        </div>
+    </footer>
+
+    <dialog id="dialog">
+            <h4>Não disponível ainda</h4>
+            <p>Infelizmente, não conseguimos fazer um carrinho de compras pra funcionar perfeitamente, mas acredito que em breve conseguiremos</p>
+            <button onclick="voltar()">Voltar</button>
+    </dialog>
+</body>
+</html>

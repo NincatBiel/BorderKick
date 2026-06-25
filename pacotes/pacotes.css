@@ -1,0 +1,176 @@
+/* ============================================================ default ============================================================*/
+:root{
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+    --azul-escuro: rgb(0, 29, 75);
+    --branco-padrao: white;
+    --preto-padrao: black;
+    --back-button: rgb(11, 136, 219);
+    --backcardslide: rgb(224, 219, 219);
+
+    --padding-left-right-mainslide: 15%;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F7FA;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/*headerfooterlogo class was here*/
+.headerfooterlogo{
+    width: 200px;
+    height: 76.19px;
+}
+
+/*removing underline in links*/
+a{text-decoration: none;}
+
+/*============================================================ header ============================================================*/
+
+header{
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background-color: var(--azul-escuro);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding-right: 2px;
+}
+
+nav a, nav p{
+    color: var(--branco-padrao);
+}
+
+/*main=======================================================================================*/
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center
+}
+
+h1{
+    color: var(--azul-escuro);
+    font-size: 30px;
+}
+
+h2{
+    color: var(--azul-escuro);
+    font-size: 25px;
+}
+
+.packs{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.packcard{
+    background-color: var(--backcardslide);
+    border-radius: 5px;
+}
+
+.packcard img{
+    width: 300px;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.packtext{
+    padding: 10px;
+    padding-top: 0;
+}
+
+.packtext p{
+    color: green;
+    font-weight: bold;
+}
+
+button{
+    border-radius: 5px;
+    border-style: none;
+    background-color: var(--azul-escuro);
+    color: var(--branco-padrao);
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.2s ease;
+}
+
+button:hover{
+    background-color: rgb(11, 136, 219);
+    transform: scale(1.1);
+}
+
+/*============================================================ footer ============================================================*/
+footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    background-color: var(--azul-escuro);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    box-sizing: border-box;
+    
+    transform: translateY(40%);
+}
+
+footer p{
+    color: var(--branco-padrao);
+    font-weight: bold;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+}
+
+.info img{
+    width: 30px;
+    height: auto;
+}
+
+/*dialog==============================================================*/
+dialog{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    height: fit-content;
+    background-color: white;
+    backdrop-filter: rgb(1, 1, 1, 0.1);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 0.1px;
+    z-index: 2;
+}
+
+dialog h4{
+    font-size: 30px;
+    color: black;
+}
