@@ -1,6 +1,6 @@
 /* ============================================================ default ============================================================*/
 :root{
-    font-family: 'Segoe UI';
+    font-family: 'Outfit', sans-serif;
     font-size: 20px;
     --azul-escuro: rgb(0, 29, 75);
     --branco-padrao: white;
@@ -51,19 +51,16 @@ header{
     z-index: 2;
 }
 
-.account{
-    background-color: var(--cinza-account);
-    height: 100%;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    padding: 5px;
-    padding-top: 1px;
-    box-shadow: 1px 1px 1px 1px black;
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    padding-right: 2px;
 }
 
-.account a{
-    padding: 5px;
-    color: var(--preto-padrao);
+nav a, nav p{
+    color: var(--branco-padrao);
 }
 
 /*============================================================ main ============================================================*/
