@@ -124,6 +124,8 @@ main{
     background-color: var(--back-button);
     box-shadow: 0 0 0 1 rgb(black);
     cursor: pointer;
+
+    transition: all 0.2s ease;
 }
 
 .packs:hover{
